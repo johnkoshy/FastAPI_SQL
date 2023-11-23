@@ -1,6 +1,9 @@
 from sqlalchemy import Column, Integer, String
 from database import Base
-
+from sqlalchemy import Boolean, ForeignKey, DateTime
+from sqlalchemy.orm import relationship
+from sqlalchemy_utils import EmailType
+import datetime
   
 class User(Base):
     __tablename__ = 'users'
@@ -12,3 +15,4 @@ class User(Base):
   
     def __repr__(self):
         return '<User %r>' % (self.id)  
+
